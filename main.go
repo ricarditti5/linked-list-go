@@ -83,6 +83,19 @@ func (t *LinkedList) InsertNodeAt(value int, position int) *Node {
 	return nil
 }
 
+func (t *LinkedList) SearchValues(value int) bool {
+	current := t.Head
+	thatExist := false
+	for current != nil {
+		if value == current.Value {
+			thatExist = true
+		}
+		current = current.Next
+	}
+	fmt.Println(thatExist)
+	return thatExist
+}
+
 func main() {
 	var (
 		op    int
@@ -113,6 +126,10 @@ func main() {
 			fmt.Println("What valor do you want to add, and in which index?:")
 			_, _ = fmt.Scanln(&vl, &index)
 			list.InsertNodeAt(vl, index)
+		case 5:
+			fmt.Println("What valor do you want to find?:")
+			_, _ = fmt.Scanln(&vl)
+			list.SearchValues(vl)
 		}
 	}
 }

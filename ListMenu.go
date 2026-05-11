@@ -8,5 +8,6 @@ func ListMenu() {
 	fmt.Println("2-Print a node")
 	fmt.Println("3-Delete a node")
 	fmt.Println("4-Add a node in any position you want")
+	fmt.Println("5-Find a node in list")
 	fmt.Println("Select an action:")
 }
